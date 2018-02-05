@@ -18,6 +18,7 @@ class TreeDrawer {
 public:
     TreeDrawer(const std::string& filename,
                ofRectangle bounds);
+    ofImage image;
 
     float getRatio();
 
@@ -30,17 +31,22 @@ public:
     void draw(int x, int y);
     void update();
 
+    vector <ofVboMesh> meshes;
+
 protected:
 
     vector <ofColor> colors;
     ofFbo fbo;
     ofxCv::ContourFinder contourFinder;
     ofRectangle bounds;
-    ofImage image;
+
     vector <ofImage> ornaments;
     float ratio;
+    float pathScale;
     int randomSeed;
-    ofPolyline outline;
+    vector <ofPath> paths;
+
+    vector <ofPolyline> polylines;
 
     void setupContours();
 

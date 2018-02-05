@@ -17,6 +17,8 @@ class ofApp : public ofBaseApp {
     void mousePressed(int x, int y, int button);
 
   protected:
+    
+    vector <ofColor> colors;
     ofPoint center;
     ofRectangle bounds;
     ofxPanel panel;
@@ -30,5 +32,7 @@ class ofApp : public ofBaseApp {
     ofFbo fbo;
 
     TreeDrawer *drawer;
+
+    void drawTest();
 
 };
