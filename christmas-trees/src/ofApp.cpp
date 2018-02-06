@@ -39,8 +39,8 @@ void ofApp::draw() {
 
 
     ofSeedRandom(0);
-    ofVboMesh mesh;
-    vector<ofVboMesh> treeMeshes = drawer->meshes;
+//    ofVboMesh mesh;
+//    vector<ofVboMesh> treeMeshes = drawer->meshes;
     int cnt = 0;
     float time = ofGetElapsedTimef();
     for (int x = 50; x < bounds.width; x += 20) {
@@ -74,7 +74,7 @@ void ofApp::draw() {
 
         }
     }
-    mesh.draw();
+//    mesh.draw();
 
 
 
